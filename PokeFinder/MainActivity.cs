@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Net;
+using System.IO;
+using System.Text;
+
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -11,6 +15,7 @@ using Android.Gms.Location;
 using Android.Gms.Common;
 using Android.Gms.Common.Apis;
 using Android.Locations;
+using Android.Gms.Ads;
 
 namespace PokeFinder
 {
@@ -26,6 +31,9 @@ namespace PokeFinder
         AutoCompleteTextView pokemonText;
         Button submitButton;
         XMLHook xmlHook;
+        private System.Timers.Timer submitTimer;
+        private int countdownSeconds = 60;
+        bool canSubmit = true;
 
         bool _mapBuilt = false;
 
@@ -64,18 +72,68 @@ namespace PokeFinder
 
             MapsInitializer.Initialize(this.Activity);
 
+            var ad = new AdView(this.Activity);
+            ad.AdSize = AdSize.SmartBanner;
+            ad.AdUnitId = "ca-app-pub-4107702687832237/3970765307";
+            var requestbuilder = new AdRequest.Builder();
+            ad.LoadAd(requestbuilder.Build());
+            var layout = view.FindViewById<LinearLayout>(Resource.Id.submitAdLayout);
+            layout.AddView(ad);
+
             return view;
+        }
+
+        void ResetTimer()
+        {
+            canSubmit = false;
+            submitTimer = new System.Timers.Timer();
+            submitTimer.Interval = 1000;
+            submitTimer.Elapsed += ResetSubmit;
+            countdownSeconds = 60;
+            submitTimer.Enabled = true;
+        }
+
+        void ResetSubmit(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            countdownSeconds--;
+
+            if(countdownSeconds == 0)
+            {
+                canSubmit = true;
+                submitTimer.Stop();
+            }
         }
 
         void SubmitPokemon()
         {
+            if (!canSubmit)
+            {
+                Toast.MakeText(base.Activity, "You must wait " + countdownSeconds.ToString() + " seconds before submitting another pokemon.", ToastLength.Short).Show();
+                return;
+            }
+               
+
+
             Console.WriteLine("submitting.");
             string[] arr = xmlHook.GetPokemonArray(base.Activity.Assets);
             string thePokemon = pokemonText.Text;
 
             if(Array.Exists(arr, element => element == thePokemon))
             {
-                //If the pokemon name exists within the array, then submit.
+                string loc = currentLocation.Latitude.ToString() + "," + currentLocation.Longitude.ToString();            
+                WebClient myClient = new WebClient();
+                Stream response = myClient.OpenRead("http://73.104.32.120/Pokefinder.php?name=" + thePokemon + "&location=" + loc);
+
+                StreamReader reader = new StreamReader(response);
+                string text = reader.ReadToEnd();
+                Toast.MakeText(base.Activity, text, ToastLength.Short).Show();
+                if (text == "Success!")
+                    ResetTimer();
+
+                response.Close();
+
+
+
             }
             else
             {
@@ -109,6 +167,7 @@ namespace PokeFinder
                 myOverlay = map.AddGroundOverlay(groundOverlayOptions);
             }
             _mapBuilt = true;
+
         }
 
         public void UpdateLocation(LatLong location)
@@ -155,7 +214,7 @@ namespace PokeFinder
         }
     }
 
-    [Activity(Label = "PokeFinder", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "PokeFinder", MainLauncher = true, Icon = "@drawable/LocationMarker")]
     public class MainActivity : Activity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener, Android.Gms.Location.ILocationListener
     {
 
