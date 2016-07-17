@@ -40,7 +40,7 @@ namespace PokeFinder
 
 
         bool _mapBuilt = false;
-
+        //message from kyle.. FUCK YES DUDE.
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);
