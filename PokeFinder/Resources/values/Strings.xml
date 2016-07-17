@@ -6,4 +6,10 @@
   <string name="google_maps_key">
     AIzaSyCGMVVbJ9Ryjlyo10aV0UV7janWkWlO3uM
   </string>
+
+  <string name="rareChoose">Choose a planet</string>
+  <string-array name="rarechooseArray">
+    <item>Rarest Pokemon</item>
+    <item>Specific Pokemon</item>
+  </string-array>
 </resources>
