@@ -34,6 +34,10 @@ namespace PokeFinder
         private System.Timers.Timer submitTimer;
         private int countdownSeconds = 60;
         bool canSubmit = true;
+        bool hasGPS = false;
+        
+
+
 
         bool _mapBuilt = false;
 
@@ -106,6 +110,12 @@ namespace PokeFinder
 
         void SubmitPokemon()
         {
+            if(!hasGPS)
+            {
+                Toast.MakeText(base.Activity, "Currently unable to provide GPS Coordinates. Please try again.", ToastLength.Short).Show();
+                return;
+            }
+
             if (!canSubmit)
             {
                 Toast.MakeText(base.Activity, "You must wait " + countdownSeconds.ToString() + " seconds before submitting another pokemon.", ToastLength.Short).Show();
@@ -122,7 +132,7 @@ namespace PokeFinder
             {
                 string loc = currentLocation.Latitude.ToString() + "," + currentLocation.Longitude.ToString();            
                 WebClient myClient = new WebClient();
-                Stream response = myClient.OpenRead("http://73.104.32.120/Pokefinder.php?name=" + thePokemon + "&location=" + loc);
+                Stream response = myClient.OpenRead("http://www.pokefindergo.com/Pokefinder.php?name=" + thePokemon + "&location=" + loc);
 
                 StreamReader reader = new StreamReader(response);
                 string text = reader.ReadToEnd();
@@ -172,7 +182,15 @@ namespace PokeFinder
 
         public void UpdateLocation(LatLong location)
         {
+            if(location == null)
+            {
+                Toast.MakeText(base.Activity, "Unable to get GPS Coordinates", ToastLength.Short).Show();
+                return;
+            }
+           
             currentLocation = location;
+
+            hasGPS = true;
 
             if (!_mapBuilt)
                 BuildMap();
@@ -224,6 +242,10 @@ namespace PokeFinder
         LatLong currentLocation;
         SubmitPokemonFragment submitFragment;
         FindPokemonFragment findFragment;
+        Button btnBugSubmit;
+        EditText messageText;
+        EditText emailText;
+        AlertDialog bugAlert;
 
         bool _isGooglePlayServicesInstalled;
 
@@ -238,9 +260,10 @@ namespace PokeFinder
             this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
             submitFragment = new SubmitPokemonFragment();
             findFragment = new FindPokemonFragment();
+            
 
             AddTab("Submit Pokemon", submitFragment);
-            AddTab("Find Pokemon", findFragment);
+            //AddTab("Find Pokemon", findFragment);
 
             _isGooglePlayServicesInstalled = IsGooglePlayServicesInstalled();
 
@@ -261,6 +284,83 @@ namespace PokeFinder
                 Finish();
             }
 
+        }
+
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        void SendEmail()
+        {
+            string replyEmail = emailText.Text;
+            string message = messageText.Text;
+
+            EmailHook hook = new EmailHook(replyEmail, message);
+            if(hook.SendMessage(this))
+            {
+                Toast.MakeText(this, "Bug Report successfully sent.", ToastLength.Short).Show();
+                bugAlert.Dismiss();
+            }
+            
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.MainMenu, menu);
+
+            
+
+            return base.OnPrepareOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Resource.Id.report_bug:
+                    BuildEmailAlert();
+                    return true;
+                case Resource.Id.help:
+                    //do something
+                    return true;
+            }
+            return base.OnOptionsItemSelected(item);
+        }
+
+        void BuildEmailAlert()
+        {
+
+            AlertDialog.Builder alert = new AlertDialog.Builder(this);
+            var alertView = LayoutInflater.Inflate(Resource.Layout.EmailForm, null);
+            alert.SetView(alertView);
+            alert.SetTitle("Report Bug");
+
+            btnBugSubmit = alertView.FindViewById<Button>(Resource.Id.btnBugSubmit);
+            messageText = alertView.FindViewById<EditText>(Resource.Id.messageText);
+            emailText = alertView.FindViewById<EditText>(Resource.Id.emailText);
+
+            bugAlert = alert.Show();
+
+            
+
+            btnBugSubmit.Click += delegate
+            {
+                if (!IsValidEmail(emailText.Text))
+                {
+                    Toast.MakeText(this, "You must supply a valid email address.", ToastLength.Short).Show();
+                    return;
+                }
+                SendEmail();
+            };
         }
 
         void AddTab(string tabText, Fragment view)

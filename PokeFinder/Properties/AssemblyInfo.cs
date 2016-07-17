@@ -18,12 +18,8 @@ using Android.App;
 [assembly: Permission(Name = Android.Manifest.Permission.Internet)]
 [assembly: Permission(Name = Android.Manifest.Permission.AccessFineLocation)]
 [assembly: Permission(Name = Android.Manifest.Permission.AccessCoarseLocation)]
+[assembly: Application(Icon = "@drawable/Icon")]
 
-#if DEBUG
-[assembly: Application(Debuggable = true)]
-#else
-[assembly: Application(Debuggable=false)]
-#endif
 
 
 // Version information for an assembly consists of the following four values:
