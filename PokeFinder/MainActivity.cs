@@ -269,6 +269,13 @@ namespace PokeFinder
             if(selection == "Find...")
             {
                 ClearView();
+                var ad = new AdView(this.Activity);
+                ad.AdSize = AdSize.SmartBanner;
+                ad.AdUnitId = "ca-app-pub-4107702687832237/3970765307";
+                var requestbuilder = new AdRequest.Builder();
+                ad.LoadAd(requestbuilder.Build());
+                theLayout.AddView(ad);
+                viewsToClear.Add(ad);
             }
             else if(selection == "Specific Pokemon")
             {
@@ -421,6 +428,13 @@ namespace PokeFinder
             theLayout.AddView(findButton);
             viewsToClear.Add(findButton);
 
+            var ad = new AdView(this.Activity);
+            ad.AdSize = AdSize.SmartBanner;
+            ad.AdUnitId = "ca-app-pub-4107702687832237/3970765307";
+            var requestbuilder = new AdRequest.Builder();
+            ad.LoadAd(requestbuilder.Build());
+            theLayout.AddView(ad);
+            viewsToClear.Add(ad);
         }
 
         public void FindPokemon()
