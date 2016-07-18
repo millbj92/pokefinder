@@ -6,9 +6,37 @@
     android:minWidth="25px"
     android:minHeight="25px"
     android:id="@+id/findLayout">
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/firstSpinner"
-        android:prompt="@string/rareChoose" />
+  <Spinner
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/firstSpinner"
+      android:prompt="@string/rareChoose" />
+  <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+      android:orientation="vertical"
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="7.75"
+      android:id="@+id/mapLayout">
+    
+         <LinearLayout
+          android:orientation="vertical"
+          android:minWidth="25px"
+          android:minHeight="25px"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="#00ffffff"
+          android:id="@+id/buttonsLayout" />
+    
+  </LinearLayout>
+
+  <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+      android:orientation="vertical"
+      android:minWidth="25px"
+      android:minHeight="25px"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:id="@+id/adsLayout"/>
 </LinearLayout>

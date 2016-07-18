@@ -471,11 +471,17 @@ namespace PokeFinder
 			// aapt resource value: 0x7f0b0006
 			public const int adjust_width = 2131427334;
 			
+			// aapt resource value: 0x7f0b0014
+			public const int adsLayout = 2131427348;
+			
 			// aapt resource value: 0x7f0b000a
 			public const int auto = 2131427338;
 			
 			// aapt resource value: 0x7f0b000f
 			public const int btnBugSubmit = 2131427343;
+			
+			// aapt resource value: 0x7f0b0013
+			public const int buttonsLayout = 2131427347;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int dark = 2131427339;
@@ -489,11 +495,11 @@ namespace PokeFinder
 			// aapt resource value: 0x7f0b0011
 			public const int firstSpinner = 2131427345;
 			
-			// aapt resource value: 0x7f0b0012
-			public const int fragmentContainer = 2131427346;
+			// aapt resource value: 0x7f0b0015
+			public const int fragmentContainer = 2131427349;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int help = 2131427361;
+			// aapt resource value: 0x7f0b0024
+			public const int help = 2131427364;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int hybrid = 2131427328;
@@ -504,8 +510,11 @@ namespace PokeFinder
 			// aapt resource value: 0x7f0b000c
 			public const int light = 2131427340;
 			
-			// aapt resource value: 0x7f0b001d
-			public const int mapContainer = 2131427357;
+			// aapt resource value: 0x7f0b0020
+			public const int mapContainer = 2131427360;
+			
+			// aapt resource value: 0x7f0b0012
+			public const int mapLayout = 2131427346;
 			
 			// aapt resource value: 0x7f0b000e
 			public const int messageText = 2131427342;
@@ -516,35 +525,35 @@ namespace PokeFinder
 			// aapt resource value: 0x7f0b0002
 			public const int normal = 2131427330;
 			
-			// aapt resource value: 0x7f0b0015
-			public const int place_autocomplete_clear_button = 2131427349;
-			
-			// aapt resource value: 0x7f0b0017
-			public const int place_autocomplete_powered_by_google = 2131427351;
-			
-			// aapt resource value: 0x7f0b0019
-			public const int place_autocomplete_prediction_primary_text = 2131427353;
+			// aapt resource value: 0x7f0b0018
+			public const int place_autocomplete_clear_button = 2131427352;
 			
 			// aapt resource value: 0x7f0b001a
-			public const int place_autocomplete_prediction_secondary_text = 2131427354;
-			
-			// aapt resource value: 0x7f0b0018
-			public const int place_autocomplete_progress = 2131427352;
-			
-			// aapt resource value: 0x7f0b0013
-			public const int place_autocomplete_search_button = 2131427347;
-			
-			// aapt resource value: 0x7f0b0014
-			public const int place_autocomplete_search_input = 2131427348;
-			
-			// aapt resource value: 0x7f0b0016
-			public const int place_autocomplete_separator = 2131427350;
+			public const int place_autocomplete_powered_by_google = 2131427354;
 			
 			// aapt resource value: 0x7f0b001c
-			public const int pokemonNameText1 = 2131427356;
+			public const int place_autocomplete_prediction_primary_text = 2131427356;
 			
-			// aapt resource value: 0x7f0b0020
-			public const int report_bug = 2131427360;
+			// aapt resource value: 0x7f0b001d
+			public const int place_autocomplete_prediction_secondary_text = 2131427357;
+			
+			// aapt resource value: 0x7f0b001b
+			public const int place_autocomplete_progress = 2131427355;
+			
+			// aapt resource value: 0x7f0b0016
+			public const int place_autocomplete_search_button = 2131427350;
+			
+			// aapt resource value: 0x7f0b0017
+			public const int place_autocomplete_search_input = 2131427351;
+			
+			// aapt resource value: 0x7f0b0019
+			public const int place_autocomplete_separator = 2131427353;
+			
+			// aapt resource value: 0x7f0b001f
+			public const int pokemonNameText1 = 2131427359;
+			
+			// aapt resource value: 0x7f0b0023
+			public const int report_bug = 2131427363;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int satellite = 2131427331;
@@ -552,14 +561,14 @@ namespace PokeFinder
 			// aapt resource value: 0x7f0b0008
 			public const int standard = 2131427336;
 			
-			// aapt resource value: 0x7f0b001f
-			public const int submitAdLayout = 2131427359;
+			// aapt resource value: 0x7f0b0022
+			public const int submitAdLayout = 2131427362;
+			
+			// aapt resource value: 0x7f0b0021
+			public const int submitButton = 2131427361;
 			
 			// aapt resource value: 0x7f0b001e
-			public const int submitButton = 2131427358;
-			
-			// aapt resource value: 0x7f0b001b
-			public const int submitLayout = 2131427355;
+			public const int submitLayout = 2131427358;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int terrain = 2131427332;
