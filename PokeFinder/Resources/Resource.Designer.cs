@@ -31,11 +31,11 @@ namespace PokeFinder
 		public partial class Array
 		{
 			
-			// aapt resource value: 0x7f090001
-			public const int rarechooseArray = 2131296257;
+			// aapt resource value: 0x7f0a0001
+			public const int rarechooseArray = 2131361793;
 			
-			// aapt resource value: 0x7f090000
-			public const int spinnerItems = 2131296256;
+			// aapt resource value: 0x7f0a0000
+			public const int spinnerItems = 2131361792;
 			
 			static Array()
 			{
@@ -141,86 +141,86 @@ namespace PokeFinder
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f04000e
-			public const int common_action_bar_splitter = 2130968590;
+			// aapt resource value: 0x7f05000e
+			public const int common_action_bar_splitter = 2131034126;
 			
-			// aapt resource value: 0x7f040017
-			public const int common_google_signin_btn_text_dark = 2130968599;
+			// aapt resource value: 0x7f050017
+			public const int common_google_signin_btn_text_dark = 2131034135;
 			
-			// aapt resource value: 0x7f04000f
-			public const int common_google_signin_btn_text_dark_default = 2130968591;
+			// aapt resource value: 0x7f05000f
+			public const int common_google_signin_btn_text_dark_default = 2131034127;
 			
-			// aapt resource value: 0x7f040011
-			public const int common_google_signin_btn_text_dark_disabled = 2130968593;
+			// aapt resource value: 0x7f050011
+			public const int common_google_signin_btn_text_dark_disabled = 2131034129;
 			
-			// aapt resource value: 0x7f040012
-			public const int common_google_signin_btn_text_dark_focused = 2130968594;
+			// aapt resource value: 0x7f050012
+			public const int common_google_signin_btn_text_dark_focused = 2131034130;
 			
-			// aapt resource value: 0x7f040010
-			public const int common_google_signin_btn_text_dark_pressed = 2130968592;
+			// aapt resource value: 0x7f050010
+			public const int common_google_signin_btn_text_dark_pressed = 2131034128;
 			
-			// aapt resource value: 0x7f040018
-			public const int common_google_signin_btn_text_light = 2130968600;
+			// aapt resource value: 0x7f050018
+			public const int common_google_signin_btn_text_light = 2131034136;
 			
-			// aapt resource value: 0x7f040013
-			public const int common_google_signin_btn_text_light_default = 2130968595;
+			// aapt resource value: 0x7f050013
+			public const int common_google_signin_btn_text_light_default = 2131034131;
 			
-			// aapt resource value: 0x7f040015
-			public const int common_google_signin_btn_text_light_disabled = 2130968597;
+			// aapt resource value: 0x7f050015
+			public const int common_google_signin_btn_text_light_disabled = 2131034133;
 			
-			// aapt resource value: 0x7f040016
-			public const int common_google_signin_btn_text_light_focused = 2130968598;
+			// aapt resource value: 0x7f050016
+			public const int common_google_signin_btn_text_light_focused = 2131034134;
 			
-			// aapt resource value: 0x7f040014
-			public const int common_google_signin_btn_text_light_pressed = 2130968596;
+			// aapt resource value: 0x7f050014
+			public const int common_google_signin_btn_text_light_pressed = 2131034132;
 			
-			// aapt resource value: 0x7f040019
-			public const int common_plus_signin_btn_text_dark = 2130968601;
+			// aapt resource value: 0x7f050019
+			public const int common_plus_signin_btn_text_dark = 2131034137;
 			
-			// aapt resource value: 0x7f040006
-			public const int common_plus_signin_btn_text_dark_default = 2130968582;
+			// aapt resource value: 0x7f050006
+			public const int common_plus_signin_btn_text_dark_default = 2131034118;
 			
-			// aapt resource value: 0x7f040008
-			public const int common_plus_signin_btn_text_dark_disabled = 2130968584;
+			// aapt resource value: 0x7f050008
+			public const int common_plus_signin_btn_text_dark_disabled = 2131034120;
 			
-			// aapt resource value: 0x7f040009
-			public const int common_plus_signin_btn_text_dark_focused = 2130968585;
+			// aapt resource value: 0x7f050009
+			public const int common_plus_signin_btn_text_dark_focused = 2131034121;
 			
-			// aapt resource value: 0x7f040007
-			public const int common_plus_signin_btn_text_dark_pressed = 2130968583;
+			// aapt resource value: 0x7f050007
+			public const int common_plus_signin_btn_text_dark_pressed = 2131034119;
 			
-			// aapt resource value: 0x7f04001a
-			public const int common_plus_signin_btn_text_light = 2130968602;
+			// aapt resource value: 0x7f05001a
+			public const int common_plus_signin_btn_text_light = 2131034138;
 			
-			// aapt resource value: 0x7f04000a
-			public const int common_plus_signin_btn_text_light_default = 2130968586;
+			// aapt resource value: 0x7f05000a
+			public const int common_plus_signin_btn_text_light_default = 2131034122;
 			
-			// aapt resource value: 0x7f04000c
-			public const int common_plus_signin_btn_text_light_disabled = 2130968588;
+			// aapt resource value: 0x7f05000c
+			public const int common_plus_signin_btn_text_light_disabled = 2131034124;
 			
-			// aapt resource value: 0x7f04000d
-			public const int common_plus_signin_btn_text_light_focused = 2130968589;
+			// aapt resource value: 0x7f05000d
+			public const int common_plus_signin_btn_text_light_focused = 2131034125;
 			
-			// aapt resource value: 0x7f04000b
-			public const int common_plus_signin_btn_text_light_pressed = 2130968587;
+			// aapt resource value: 0x7f05000b
+			public const int common_plus_signin_btn_text_light_pressed = 2131034123;
 			
-			// aapt resource value: 0x7f040002
-			public const int place_autocomplete_prediction_primary_text = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int place_autocomplete_prediction_primary_text = 2131034114;
 			
-			// aapt resource value: 0x7f040003
-			public const int place_autocomplete_prediction_primary_text_highlight = 2130968579;
+			// aapt resource value: 0x7f050003
+			public const int place_autocomplete_prediction_primary_text_highlight = 2131034115;
 			
-			// aapt resource value: 0x7f040004
-			public const int place_autocomplete_prediction_secondary_text = 2130968580;
+			// aapt resource value: 0x7f050004
+			public const int place_autocomplete_prediction_secondary_text = 2131034116;
 			
-			// aapt resource value: 0x7f040001
-			public const int place_autocomplete_search_hint = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int place_autocomplete_search_hint = 2131034113;
 			
-			// aapt resource value: 0x7f040000
-			public const int place_autocomplete_search_text = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int place_autocomplete_search_text = 2131034112;
 			
-			// aapt resource value: 0x7f040005
-			public const int place_autocomplete_separator = 2130968581;
+			// aapt resource value: 0x7f050005
+			public const int place_autocomplete_separator = 2131034117;
 			
 			static Color()
 			{
@@ -235,35 +235,35 @@ namespace PokeFinder
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int place_autocomplete_button_padding = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int place_autocomplete_button_padding = 2131099648;
 			
-			// aapt resource value: 0x7f050008
-			public const int place_autocomplete_powered_by_google_height = 2131034120;
+			// aapt resource value: 0x7f060008
+			public const int place_autocomplete_powered_by_google_height = 2131099656;
 			
-			// aapt resource value: 0x7f050009
-			public const int place_autocomplete_powered_by_google_start = 2131034121;
+			// aapt resource value: 0x7f060009
+			public const int place_autocomplete_powered_by_google_start = 2131099657;
 			
-			// aapt resource value: 0x7f050003
-			public const int place_autocomplete_prediction_height = 2131034115;
+			// aapt resource value: 0x7f060003
+			public const int place_autocomplete_prediction_height = 2131099651;
 			
-			// aapt resource value: 0x7f050004
-			public const int place_autocomplete_prediction_horizontal_margin = 2131034116;
+			// aapt resource value: 0x7f060004
+			public const int place_autocomplete_prediction_horizontal_margin = 2131099652;
 			
-			// aapt resource value: 0x7f050005
-			public const int place_autocomplete_prediction_primary_text = 2131034117;
+			// aapt resource value: 0x7f060005
+			public const int place_autocomplete_prediction_primary_text = 2131099653;
 			
-			// aapt resource value: 0x7f050006
-			public const int place_autocomplete_prediction_secondary_text = 2131034118;
+			// aapt resource value: 0x7f060006
+			public const int place_autocomplete_prediction_secondary_text = 2131099654;
 			
-			// aapt resource value: 0x7f050002
-			public const int place_autocomplete_progress_horizontal_margin = 2131034114;
+			// aapt resource value: 0x7f060002
+			public const int place_autocomplete_progress_horizontal_margin = 2131099650;
 			
-			// aapt resource value: 0x7f050001
-			public const int place_autocomplete_progress_size = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int place_autocomplete_progress_size = 2131099649;
 			
-			// aapt resource value: 0x7f050007
-			public const int place_autocomplete_separator_start = 2131034119;
+			// aapt resource value: 0x7f060007
+			public const int place_autocomplete_separator_start = 2131099655;
 			
 			static Dimension()
 			{
@@ -423,34 +423,37 @@ namespace PokeFinder
 			public const int Icon5 = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int LocationMarker = 2130837552;
+			public const int InfoWindow = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int LocationMarker1 = 2130837553;
+			public const int LocationMarker = 2130837553;
 			
 			// aapt resource value: 0x7f020032
-			public const int LocationMarker2 = 2130837554;
+			public const int LocationMarker1 = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int LocationMarker3 = 2130837555;
+			public const int LocationMarker2 = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int LocationMarker4 = 2130837556;
+			public const int LocationMarker3 = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int LocationMarker5 = 2130837557;
+			public const int LocationMarker4 = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int places_ic_clear = 2130837558;
+			public const int LocationMarker5 = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int places_ic_search = 2130837559;
+			public const int places_ic_clear = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int powered_by_google_dark = 2130837560;
+			public const int places_ic_search = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int powered_by_google_light = 2130837561;
+			public const int powered_by_google_dark = 2130837561;
+			
+			// aapt resource value: 0x7f02003a
+			public const int powered_by_google_light = 2130837562;
 			
 			static Drawable()
 			{
@@ -465,116 +468,131 @@ namespace PokeFinder
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b0005
-			public const int adjust_height = 2131427333;
+			// aapt resource value: 0x7f0c0005
+			public const int adjust_height = 2131492869;
 			
-			// aapt resource value: 0x7f0b0006
-			public const int adjust_width = 2131427334;
+			// aapt resource value: 0x7f0c0006
+			public const int adjust_width = 2131492870;
 			
-			// aapt resource value: 0x7f0b0014
-			public const int adsLayout = 2131427348;
+			// aapt resource value: 0x7f0c0014
+			public const int adsLayout = 2131492884;
 			
-			// aapt resource value: 0x7f0b000a
-			public const int auto = 2131427338;
+			// aapt resource value: 0x7f0c000a
+			public const int auto = 2131492874;
 			
-			// aapt resource value: 0x7f0b000f
-			public const int btnBugSubmit = 2131427343;
+			// aapt resource value: 0x7f0c000f
+			public const int btnBugSubmit = 2131492879;
 			
-			// aapt resource value: 0x7f0b0013
-			public const int buttonsLayout = 2131427347;
+			// aapt resource value: 0x7f0c0013
+			public const int buttonsLayout = 2131492883;
 			
-			// aapt resource value: 0x7f0b000b
-			public const int dark = 2131427339;
+			// aapt resource value: 0x7f0c000b
+			public const int dark = 2131492875;
 			
-			// aapt resource value: 0x7f0b000d
-			public const int emailText = 2131427341;
+			// aapt resource value: 0x7f0c0019
+			public const int distanceText = 2131492889;
 			
-			// aapt resource value: 0x7f0b0010
-			public const int findLayout = 2131427344;
+			// aapt resource value: 0x7f0c000d
+			public const int emailText = 2131492877;
 			
-			// aapt resource value: 0x7f0b0011
-			public const int firstSpinner = 2131427345;
+			// aapt resource value: 0x7f0c0010
+			public const int findLayout = 2131492880;
 			
-			// aapt resource value: 0x7f0b0015
-			public const int fragmentContainer = 2131427349;
+			// aapt resource value: 0x7f0c0011
+			public const int firstSpinner = 2131492881;
 			
-			// aapt resource value: 0x7f0b0024
-			public const int help = 2131427364;
+			// aapt resource value: 0x7f0c001a
+			public const int fragmentContainer = 2131492890;
 			
-			// aapt resource value: 0x7f0b0000
-			public const int hybrid = 2131427328;
+			// aapt resource value: 0x7f0c0029
+			public const int help = 2131492905;
 			
-			// aapt resource value: 0x7f0b0007
-			public const int icon_only = 2131427335;
+			// aapt resource value: 0x7f0c0000
+			public const int hybrid = 2131492864;
 			
-			// aapt resource value: 0x7f0b000c
-			public const int light = 2131427340;
+			// aapt resource value: 0x7f0c0007
+			public const int icon_only = 2131492871;
 			
-			// aapt resource value: 0x7f0b0020
-			public const int mapContainer = 2131427360;
+			// aapt resource value: 0x7f0c0015
+			public const int imageView1 = 2131492885;
 			
-			// aapt resource value: 0x7f0b0012
-			public const int mapLayout = 2131427346;
+			// aapt resource value: 0x7f0c000c
+			public const int light = 2131492876;
 			
-			// aapt resource value: 0x7f0b000e
-			public const int messageText = 2131427342;
+			// aapt resource value: 0x7f0c0016
+			public const int linearLayout1 = 2131492886;
 			
-			// aapt resource value: 0x7f0b0001
-			public const int none = 2131427329;
+			// aapt resource value: 0x7f0c0025
+			public const int mapContainer = 2131492901;
 			
-			// aapt resource value: 0x7f0b0002
-			public const int normal = 2131427330;
+			// aapt resource value: 0x7f0c0012
+			public const int mapLayout = 2131492882;
 			
-			// aapt resource value: 0x7f0b0018
-			public const int place_autocomplete_clear_button = 2131427352;
+			// aapt resource value: 0x7f0c000e
+			public const int messageText = 2131492878;
 			
-			// aapt resource value: 0x7f0b001a
-			public const int place_autocomplete_powered_by_google = 2131427354;
+			// aapt resource value: 0x7f0c0017
+			public const int nameText = 2131492887;
 			
-			// aapt resource value: 0x7f0b001c
-			public const int place_autocomplete_prediction_primary_text = 2131427356;
+			// aapt resource value: 0x7f0c0001
+			public const int none = 2131492865;
 			
-			// aapt resource value: 0x7f0b001d
-			public const int place_autocomplete_prediction_secondary_text = 2131427357;
+			// aapt resource value: 0x7f0c0002
+			public const int normal = 2131492866;
 			
-			// aapt resource value: 0x7f0b001b
-			public const int place_autocomplete_progress = 2131427355;
+			// aapt resource value: 0x7f0c001d
+			public const int place_autocomplete_clear_button = 2131492893;
 			
-			// aapt resource value: 0x7f0b0016
-			public const int place_autocomplete_search_button = 2131427350;
+			// aapt resource value: 0x7f0c001f
+			public const int place_autocomplete_powered_by_google = 2131492895;
 			
-			// aapt resource value: 0x7f0b0017
-			public const int place_autocomplete_search_input = 2131427351;
+			// aapt resource value: 0x7f0c0021
+			public const int place_autocomplete_prediction_primary_text = 2131492897;
 			
-			// aapt resource value: 0x7f0b0019
-			public const int place_autocomplete_separator = 2131427353;
+			// aapt resource value: 0x7f0c0022
+			public const int place_autocomplete_prediction_secondary_text = 2131492898;
 			
-			// aapt resource value: 0x7f0b001f
-			public const int pokemonNameText1 = 2131427359;
+			// aapt resource value: 0x7f0c0020
+			public const int place_autocomplete_progress = 2131492896;
 			
-			// aapt resource value: 0x7f0b0023
-			public const int report_bug = 2131427363;
+			// aapt resource value: 0x7f0c001b
+			public const int place_autocomplete_search_button = 2131492891;
 			
-			// aapt resource value: 0x7f0b0003
-			public const int satellite = 2131427331;
+			// aapt resource value: 0x7f0c001c
+			public const int place_autocomplete_search_input = 2131492892;
 			
-			// aapt resource value: 0x7f0b0008
-			public const int standard = 2131427336;
+			// aapt resource value: 0x7f0c001e
+			public const int place_autocomplete_separator = 2131492894;
 			
-			// aapt resource value: 0x7f0b0022
-			public const int submitAdLayout = 2131427362;
+			// aapt resource value: 0x7f0c0024
+			public const int pokemonNameText1 = 2131492900;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int submitButton = 2131427361;
+			// aapt resource value: 0x7f0c0028
+			public const int report_bug = 2131492904;
 			
-			// aapt resource value: 0x7f0b001e
-			public const int submitLayout = 2131427358;
+			// aapt resource value: 0x7f0c0003
+			public const int satellite = 2131492867;
 			
-			// aapt resource value: 0x7f0b0004
-			public const int terrain = 2131427332;
+			// aapt resource value: 0x7f0c0008
+			public const int standard = 2131492872;
 			
-			// aapt resource value: 0x7f0b0009
-			public const int wide = 2131427337;
+			// aapt resource value: 0x7f0c0027
+			public const int submitAdLayout = 2131492903;
+			
+			// aapt resource value: 0x7f0c0026
+			public const int submitButton = 2131492902;
+			
+			// aapt resource value: 0x7f0c0023
+			public const int submitLayout = 2131492899;
+			
+			// aapt resource value: 0x7f0c0004
+			public const int terrain = 2131492868;
+			
+			// aapt resource value: 0x7f0c0018
+			public const int timeText = 2131492888;
+			
+			// aapt resource value: 0x7f0c0009
+			public const int wide = 2131492873;
 			
 			static Id()
 			{
@@ -589,8 +607,8 @@ namespace PokeFinder
 		public partial class Integer
 		{
 			
-			// aapt resource value: 0x7f070000
-			public const int google_play_services_version = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int google_play_services_version = 2131230720;
 			
 			static Integer()
 			{
@@ -612,22 +630,25 @@ namespace PokeFinder
 			public const int FindPokemon = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Main = 2130903042;
+			public const int infowindow = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int place_autocomplete_fragment = 2130903043;
+			public const int Main = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int place_autocomplete_item_powered_by_google = 2130903044;
+			public const int place_autocomplete_fragment = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int place_autocomplete_item_prediction = 2130903045;
+			public const int place_autocomplete_item_powered_by_google = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int place_autocomplete_progress = 2130903046;
+			public const int place_autocomplete_item_prediction = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int SubmitPokemon = 2130903047;
+			public const int place_autocomplete_progress = 2130903047;
+			
+			// aapt resource value: 0x7f030008
+			public const int SubmitPokemon = 2130903048;
 			
 			static Layout()
 			{
@@ -642,8 +663,8 @@ namespace PokeFinder
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f0a0000
-			public const int MainMenu = 2131361792;
+			// aapt resource value: 0x7f0b0000
+			public const int MainMenu = 2131427328;
 			
 			static Menu()
 			{
@@ -655,137 +676,153 @@ namespace PokeFinder
 			}
 		}
 		
+		public partial class Raw
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int gtm_analytics = 2130968576;
+			
+			static Raw()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Raw()
+			{
+			}
+		}
+		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060028
-			public const int ApplicationName = 2131099688;
+			// aapt resource value: 0x7f070028
+			public const int ApplicationName = 2131165224;
 			
-			// aapt resource value: 0x7f060027
-			public const int Hello = 2131099687;
+			// aapt resource value: 0x7f070027
+			public const int Hello = 2131165223;
 			
-			// aapt resource value: 0x7f060023
-			public const int accept = 2131099683;
+			// aapt resource value: 0x7f070023
+			public const int accept = 2131165219;
 			
-			// aapt resource value: 0x7f060003
-			public const int auth_google_play_services_client_facebook_display_name = 2131099651;
+			// aapt resource value: 0x7f070003
+			public const int auth_google_play_services_client_facebook_display_name = 2131165187;
 			
-			// aapt resource value: 0x7f060002
-			public const int auth_google_play_services_client_google_display_name = 2131099650;
+			// aapt resource value: 0x7f070002
+			public const int auth_google_play_services_client_google_display_name = 2131165186;
 			
-			// aapt resource value: 0x7f06001a
-			public const int common_google_play_services_api_unavailable_text = 2131099674;
+			// aapt resource value: 0x7f07001a
+			public const int common_google_play_services_api_unavailable_text = 2131165210;
 			
-			// aapt resource value: 0x7f06000c
-			public const int common_google_play_services_enable_button = 2131099660;
+			// aapt resource value: 0x7f07000c
+			public const int common_google_play_services_enable_button = 2131165196;
 			
-			// aapt resource value: 0x7f06000b
-			public const int common_google_play_services_enable_text = 2131099659;
+			// aapt resource value: 0x7f07000b
+			public const int common_google_play_services_enable_text = 2131165195;
 			
-			// aapt resource value: 0x7f06000a
-			public const int common_google_play_services_enable_title = 2131099658;
+			// aapt resource value: 0x7f07000a
+			public const int common_google_play_services_enable_title = 2131165194;
 			
-			// aapt resource value: 0x7f060009
-			public const int common_google_play_services_install_button = 2131099657;
+			// aapt resource value: 0x7f070009
+			public const int common_google_play_services_install_button = 2131165193;
 			
-			// aapt resource value: 0x7f060007
-			public const int common_google_play_services_install_text_phone = 2131099655;
+			// aapt resource value: 0x7f070007
+			public const int common_google_play_services_install_text_phone = 2131165191;
 			
-			// aapt resource value: 0x7f060008
-			public const int common_google_play_services_install_text_tablet = 2131099656;
+			// aapt resource value: 0x7f070008
+			public const int common_google_play_services_install_text_tablet = 2131165192;
 			
-			// aapt resource value: 0x7f060006
-			public const int common_google_play_services_install_title = 2131099654;
+			// aapt resource value: 0x7f070006
+			public const int common_google_play_services_install_title = 2131165190;
 			
-			// aapt resource value: 0x7f060015
-			public const int common_google_play_services_invalid_account_text = 2131099669;
+			// aapt resource value: 0x7f070015
+			public const int common_google_play_services_invalid_account_text = 2131165205;
 			
-			// aapt resource value: 0x7f060014
-			public const int common_google_play_services_invalid_account_title = 2131099668;
+			// aapt resource value: 0x7f070014
+			public const int common_google_play_services_invalid_account_title = 2131165204;
 			
-			// aapt resource value: 0x7f060013
-			public const int common_google_play_services_network_error_text = 2131099667;
+			// aapt resource value: 0x7f070013
+			public const int common_google_play_services_network_error_text = 2131165203;
 			
-			// aapt resource value: 0x7f060012
-			public const int common_google_play_services_network_error_title = 2131099666;
+			// aapt resource value: 0x7f070012
+			public const int common_google_play_services_network_error_title = 2131165202;
 			
-			// aapt resource value: 0x7f060005
-			public const int common_google_play_services_notification_ticker = 2131099653;
+			// aapt resource value: 0x7f070005
+			public const int common_google_play_services_notification_ticker = 2131165189;
 			
-			// aapt resource value: 0x7f06001e
-			public const int common_google_play_services_restricted_profile_text = 2131099678;
+			// aapt resource value: 0x7f07001e
+			public const int common_google_play_services_restricted_profile_text = 2131165214;
 			
-			// aapt resource value: 0x7f06001d
-			public const int common_google_play_services_restricted_profile_title = 2131099677;
+			// aapt resource value: 0x7f07001d
+			public const int common_google_play_services_restricted_profile_title = 2131165213;
 			
-			// aapt resource value: 0x7f06001c
-			public const int common_google_play_services_sign_in_failed_text = 2131099676;
+			// aapt resource value: 0x7f07001c
+			public const int common_google_play_services_sign_in_failed_text = 2131165212;
 			
-			// aapt resource value: 0x7f06001b
-			public const int common_google_play_services_sign_in_failed_title = 2131099675;
+			// aapt resource value: 0x7f07001b
+			public const int common_google_play_services_sign_in_failed_title = 2131165211;
 			
-			// aapt resource value: 0x7f060004
-			public const int common_google_play_services_unknown_issue = 2131099652;
+			// aapt resource value: 0x7f070004
+			public const int common_google_play_services_unknown_issue = 2131165188;
 			
-			// aapt resource value: 0x7f060017
-			public const int common_google_play_services_unsupported_text = 2131099671;
+			// aapt resource value: 0x7f070017
+			public const int common_google_play_services_unsupported_text = 2131165207;
 			
-			// aapt resource value: 0x7f060016
-			public const int common_google_play_services_unsupported_title = 2131099670;
+			// aapt resource value: 0x7f070016
+			public const int common_google_play_services_unsupported_title = 2131165206;
 			
-			// aapt resource value: 0x7f060018
-			public const int common_google_play_services_update_button = 2131099672;
+			// aapt resource value: 0x7f070018
+			public const int common_google_play_services_update_button = 2131165208;
 			
-			// aapt resource value: 0x7f06000e
-			public const int common_google_play_services_update_text = 2131099662;
+			// aapt resource value: 0x7f07000e
+			public const int common_google_play_services_update_text = 2131165198;
 			
-			// aapt resource value: 0x7f06000d
-			public const int common_google_play_services_update_title = 2131099661;
+			// aapt resource value: 0x7f07000d
+			public const int common_google_play_services_update_title = 2131165197;
 			
-			// aapt resource value: 0x7f060011
-			public const int common_google_play_services_updating_text = 2131099665;
+			// aapt resource value: 0x7f070011
+			public const int common_google_play_services_updating_text = 2131165201;
 			
-			// aapt resource value: 0x7f060010
-			public const int common_google_play_services_updating_title = 2131099664;
+			// aapt resource value: 0x7f070010
+			public const int common_google_play_services_updating_title = 2131165200;
 			
-			// aapt resource value: 0x7f06000f
-			public const int common_google_play_services_wear_update_text = 2131099663;
+			// aapt resource value: 0x7f07000f
+			public const int common_google_play_services_wear_update_text = 2131165199;
 			
-			// aapt resource value: 0x7f060019
-			public const int common_open_on_phone = 2131099673;
+			// aapt resource value: 0x7f070019
+			public const int common_open_on_phone = 2131165209;
 			
-			// aapt resource value: 0x7f06001f
-			public const int common_signin_button_text = 2131099679;
+			// aapt resource value: 0x7f07001f
+			public const int common_signin_button_text = 2131165215;
 			
-			// aapt resource value: 0x7f060020
-			public const int common_signin_button_text_long = 2131099680;
+			// aapt resource value: 0x7f070020
+			public const int common_signin_button_text_long = 2131165216;
 			
-			// aapt resource value: 0x7f060026
-			public const int create_calendar_message = 2131099686;
+			// aapt resource value: 0x7f070026
+			public const int create_calendar_message = 2131165222;
 			
-			// aapt resource value: 0x7f060025
-			public const int create_calendar_title = 2131099685;
+			// aapt resource value: 0x7f070025
+			public const int create_calendar_title = 2131165221;
 			
-			// aapt resource value: 0x7f060024
-			public const int decline = 2131099684;
+			// aapt resource value: 0x7f070024
+			public const int decline = 2131165220;
 			
-			// aapt resource value: 0x7f060029
-			public const int google_maps_key = 2131099689;
+			// aapt resource value: 0x7f070029
+			public const int google_maps_key = 2131165225;
 			
-			// aapt resource value: 0x7f060001
-			public const int place_autocomplete_clear_button = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int place_autocomplete_clear_button = 2131165185;
 			
-			// aapt resource value: 0x7f060000
-			public const int place_autocomplete_search_hint = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int place_autocomplete_search_hint = 2131165184;
 			
-			// aapt resource value: 0x7f06002a
-			public const int rareChoose = 2131099690;
+			// aapt resource value: 0x7f07002a
+			public const int rareChoose = 2131165226;
 			
-			// aapt resource value: 0x7f060022
-			public const int store_picture_message = 2131099682;
+			// aapt resource value: 0x7f070022
+			public const int store_picture_message = 2131165218;
 			
-			// aapt resource value: 0x7f060021
-			public const int store_picture_title = 2131099681;
+			// aapt resource value: 0x7f070021
+			public const int store_picture_title = 2131165217;
 			
 			static String()
 			{
@@ -800,8 +837,8 @@ namespace PokeFinder
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f080000
-			public const int Theme_IAPTheme = 2131230720;
+			// aapt resource value: 0x7f090000
+			public const int Theme_IAPTheme = 2131296256;
 			
 			static Style()
 			{

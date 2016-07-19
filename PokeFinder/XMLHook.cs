@@ -29,7 +29,7 @@ namespace PokeFinder
 
             var doc = XDocument.Load(Assets.Open("Pokemon.xml"));
 
-
+            
             var pokemon = from list in doc.Descendants("Pokemon")
                           select (string)list.Value;
 
@@ -40,6 +40,23 @@ namespace PokeFinder
             return arr;
             
         }
+
+        public string ReturnID(string name, AssetManager Assets)
+        {
+            XDocument doc = XDocument.Load(Assets.Open("Pokemon.xml"));
+
+            foreach (XElement element in doc.Descendants("Pokemon"))
+            {
+                if(element.Value == name)
+                {
+                    return element.Attribute("id").Value;
+                }
+            }
+
+            return null;
+        }
+
+
 
     }
 }

@@ -7,6 +7,7 @@ using System.Json;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
+using Android.Graphics;
 using Xamarin.Android;
 using Android.App;
 using Android.Content;
@@ -38,6 +39,7 @@ namespace PokeFinder
         public string country;
         public float distance;
         public string dType;
+        
     }
 
     class SubmitPokemonFragment : Fragment
@@ -242,7 +244,7 @@ namespace PokeFinder
         }
     }
 
-    class FindPokemonFragment : Fragment
+    class FindPokemonFragment : Fragment, Android.Gms.Maps.GoogleMap.IInfoWindowAdapter
     {
         
         public LatLong currentLocation;
@@ -914,53 +916,51 @@ namespace PokeFinder
         public List<PokemonObject> GetRarest(List<PokemonObject> formatted, int top)
         {
             
-            Dictionary<string, int> raritySorter = new Dictionary<string, int>();
+            Dictionary<PokemonObject, int> raritySorter = new Dictionary<PokemonObject, int>();
 
             for(int i = 0; i < formatted.Count; i++)
             {
                 
-                    if(raritySorter.ContainsKey(formatted[i].name))
+                    if(raritySorter.ContainsKey(formatted[i]))
                     {
-                        raritySorter[formatted[i].name] += 1;
+                        raritySorter[formatted[i]] += 1;
                         
                     }
                     else
                     {
-                        raritySorter.Add(formatted[i].name, 1);
+                        raritySorter.Add(formatted[i], 1);
                     }
             }
 
-            Console.WriteLine("***********COUNT********** " + raritySorter.Count().ToString());
 
-            List<KeyValuePair<string, int>> sorted = (from kv in raritySorter orderby kv.Value select kv).ToList();
 
-            Dictionary<string, int> sortedDict = new Dictionary<string, int>();
+            List<KeyValuePair<PokemonObject, int>> sorted = raritySorter.ToList<KeyValuePair<PokemonObject, int>>();
 
-            foreach (KeyValuePair<string, int> kvp in sorted)
-            {
-                sortedDict.Add(kvp.Key, kvp.Value);
-                Console.WriteLine("*********************************" + kvp.Key + "," + kvp.Value);
-            }
+            sorted.Sort(Compare2);
+
+            
                 
 
             int a = top;
-            if (top > sortedDict.Count())
-                a = sortedDict.Count();
+            if (top > sorted.Count())
+                a = sorted.Count();
 
-            Console.WriteLine("++++++++++++++++ COUNT: " + a);
+            
 
-            List<PokemonObject> sorted2 = new List<PokemonObject>();
+            List<PokemonObject> final = new List<PokemonObject>();
             for(int b = 0; b < a; b++)
             {
-                foreach(PokemonObject obj in formatted)
-                {
-                    if (sortedDict.ContainsKey(obj.name))
-                        sorted2.Add(obj);
-                }
+                final.Add(sorted[b].Key);
             }
 
+            foreach (PokemonObject p in final)
+                Console.WriteLine(p.name);
+            return final;
+        }
 
-            return sorted2;
+        static int Compare2(KeyValuePair<PokemonObject, int> a, KeyValuePair<PokemonObject, int> b)
+        {
+            return a.Value.CompareTo(b.Value);
         }
 
         public List<PokemonObject> PrepareList(List<PokemonObject> lst, float radius, int distType)
@@ -1067,8 +1067,12 @@ namespace PokeFinder
                 markerOptions.SetPosition(new LatLng(lat, lon));
                 markerOptions.SetTitle(p.name);
                 markerOptions.SetIcon(BitmapDescriptorFactory.DefaultMarker(BitmapDescriptorFactory.HueCyan));
-                markerOptions.SetSnippet("Distance: " + p.distance + " " + p.dType);
-                map.AddMarker(markerOptions);
+                DateTime timeAdded = DateTime.Parse(p.timestamp);
+                TimeSpan ts = DateTime.Now - timeAdded;
+                
+                markerOptions.SetSnippet(p.distance.ToString("F2") + "," + p.dType + "," + ts.TotalMinutes);
+                Marker m = map.AddMarker(markerOptions);
+                map.SetInfoWindowAdapter(this);
             }
         }
 
@@ -1101,6 +1105,84 @@ namespace PokeFinder
         {
             currentLocation = location;
             loc = l;
+        }
+
+        public View GetInfoContents(Marker marker)
+        {
+            return null;
+        }
+
+        public View GetInfoWindow(Marker marker)
+        {
+            View view = base.Activity.LayoutInflater.Inflate(Resource.Layout.infowindow, null);
+            view.LayoutParameters = new ViewGroup.LayoutParams(128, ViewGroup.LayoutParams.MatchParent);
+            string[] arr = marker.Snippet.Split(',');
+            string distance = arr[0];
+            string time = arr[2];
+            string type = arr[1];
+            string m;
+
+            Console.WriteLine("********TIME*********" + time);
+            float t = float.Parse(time);
+
+            if ((t / 60) >= 1f)
+            {
+                float i = t / 60;
+                t = i;
+                m = "hours";
+                Console.WriteLine((t / 24).ToString());
+                if ((t / 24) >= 1f)
+                {
+                    float j = t / 24;
+                    t = j;
+                    m = "days";
+                }
+            }
+            else
+                m = "minutes";
+
+            string url = "http://pokefindergo.com/images/Sprites/";
+
+            XMLHook hook = new XMLHook();
+
+            string id = hook.ReturnID(marker.Title, base.Activity.Assets);
+
+            url += id + ".png";
+
+            Bitmap bmp = GetImageBitmapFromUrl(url);
+            Bitmap newBmp = Bitmap.CreateScaledBitmap(bmp, 512, 512, true);
+
+            view.FindViewById<ImageView>(Resource.Id.imageView1).SetImageBitmap(newBmp);
+            view.FindViewById<TextView>(Resource.Id.nameText).Text = marker.Title;
+            view.FindViewById<TextView>(Resource.Id.distanceText).Text = distance + " " + type;
+            view.FindViewById<TextView>(Resource.Id.timeText).Text = "Added " + t.ToString("F1") + " " + m + " ago.";
+            marker.SetInfoWindowAnchor(-5.1f, .3f);
+            return view;
+        }
+
+        private Bitmap GetImageBitmapFromUrl(string url)
+        {
+            Bitmap imageBitmap = null;
+
+            using (var webClient = new WebClient())
+            {
+                byte[] imageBytes = null;
+                try
+                {
+                    imageBytes = webClient.DownloadData(url);
+                }
+                catch(Exception e)
+                {
+
+                }
+                
+                if (imageBytes != null && imageBytes.Length > 0)
+                {
+                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                }
+            }
+
+            return imageBitmap;
         }
     }
 
